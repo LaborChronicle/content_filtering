@@ -39,18 +39,64 @@ df_cleaned.to_csv(OUTPUT_FILE, index=False, encoding='utf-8')
 
 
 """ Current prompt:
-i'd like you to read each of the following titles and tell me if they are related or not related to working class issues. it shouldn't just be about things that happen to involve workers or come against workers, it needs to specifically be about labor-related issues. I'm looking for titles that are related to labor unions, collective action of working class people or the poor, and state suppression of working class people, not just titles that affect workers in general or are generally about states. i want you to take an extermely strict interpretation of this, it needs to be titles that meet these specific criteria and aren't borderline. provide me the index of each title that meets those criteria:
 
 Given the following news article:
 ---
 [Article Text]
 ---
-Label whether this article is:
-1. Related or Not Related to the following issues:
-    - issue
-    - issues
-2. If related, whether it is Positive or Negative toward workers.
-Output format: {"relevance": "Related/Not Related", "sentiment": "Positive/Negative"}
+Label whether each article is:
+1. Related or Not Related to the one or more of the following issues, using a strict interpretation:
+- collective bargaining
+- unionization efforts
+- wage disputes
+- minimum wage policies
+- right-to-work laws
+- fair labor standards
+- workers' rights
+- pension reforms
+- contract negotiations
+- walkouts
+- picket lines
+- labor strikes
+- work stoppages
+- demonstrations by workers
+- labor unrest
+- organized protests
+- wage theft
+- unsafe working conditions
+- sweatshops
+- overtime abuse
+- forced labor
+- labor trafficking
+- underpaid workers
+- worker misclassification
+- anti-union campaigns
+- union busting
+- corporate lobbying against labor
+- deregulation of labor protections
+- monopolistic practices impacting workers
+- austerity measures targeting the poor
+- privatization of public resources
+- minimum wage freezes
+- wealth inequality
+- economic justice
+- poverty rates
+- access to healthcare for workers
+- rising cost of living and wages
+- housing crises affecting the working class
+- taxation policies impacting the poor
+- police crackdowns on protests
+- surveillance of union activities
+- anti-protest laws
+- arrests of union leaders
+- military action against strikers
+- gig economy labor rights
+- platform worker protests
+- remote work policies for low-income workers
+- AI and automation replacing jobs
+- climate change affecting labor
+
+Output format: {"relevance": "Related/Not Related"}
 
 
 # correct answers for 0-99: 6, 25, 40, 45, 89
